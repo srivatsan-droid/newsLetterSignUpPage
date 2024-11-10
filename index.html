@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sign-up form start -->
+  <div id="container">
+    <div class="header">
+      <header>
+        <h2>Stay updated!</h2>
+      </header>
+    </div>
+    <div class="main">
+      <span>Join 60,000+ product managers receiving monthly updates on:</span>
+    </div><br>
+    <div id="section">
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>   <label>Product discovery and building what matters</label><br><br>
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>   <label>Measuring to ensure updates are a success</label><br><br>
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>   <label>And much more!</label>
+    <br><br>
+    </div>
+    <div id="form-email">
+      <label>Email address</label><br><br>
+      <input placeholder="email@company.com" type="text" id="email" required>
+    </div>
+    <br>
+    <div id="button">
+      <button type="submit">Subscribe to monthly newsletter</button>
+    </div>
+    <!-- Image initially hidden -->
+    <div>
+      <img id="success-image" src="design/desktop-success-active.jpg" alt="success-msg" style="display: none;">
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Srivatsan V</a>.
+  </div>
+  
+  <script>
+    const button = document.getElementById('button');
+    const text = document.getElementById('email');
+    const successImage = document.getElementById('success-image');
+
+    button.onclick = function() {
+      if (text.value.trim() !== '') { // Check if the input value is not empty
+        alert("Please open the inbox and click subscribe");
+        successImage.style.display = 'block'; // Show the image when input is valid
+      } else {
+        alert("Enter the email id");
+      }
+    };
+  </script>
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <!--Thanks for subscribing!
+
+  A confirmation email has been sent to ash@loremcompany.com. 
+  Please open it and click the button inside to confirm your subscription.
+
+  Dismiss message---> 
+
+  <!-- Success message end -->
+  
+</body>
+</html>

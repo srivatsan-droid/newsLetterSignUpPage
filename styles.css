@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(49, 43, 75);
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Ensures the body takes up the full viewport height */
+    margin: 0; /* Removes default margin */
+}
+
+#container {
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 0.75em;
+    -webkit-border-radius: 0.75em;
+    -moz-border-radius: 0.75em;
+    -ms-border-radius: 0.75em;
+    -o-border-radius: 0.75em;
+    width: 900px;
+    height: 400px;
+    background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom 20px;
+    animation-duration: 1.6s;
+}
